@@ -1,0 +1,31 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('https://drive.google.com/uc?export=view&id=1bdkQMhGCzbjaTBwXFsqbenBLSisAktgV') format('woff2');
+    font-weight: 100 900; /* Specify the supported weight range */
+    font-style: normal; /* Variable fonts typically support italics through 'font-style' property */
+    font-variation-settings: 'wght' 100, 'ital' 1; /* Variable font settings */ 
+}
+  
+body {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500; /* Change font weight */
+  /* font-style: italic; /* Apply italic style */ 
+}
+
+h1 {
+    font-size: 72px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
