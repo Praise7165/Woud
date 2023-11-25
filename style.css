@@ -65,6 +65,7 @@ a {
 header {
   padding: 1.25rem 0 1rem 0;
   border-bottom: 1px solid hsl(0, 0%, 95%);
+  background-color: white;
 }
 
 
@@ -121,6 +122,11 @@ header {
     gap: 4px;
   }
 
+  header {
+    position: fixed;
+    width: 100%;
+  }
+
   .topBar {
     display: flex;
     justify-content: space-between;
@@ -129,13 +135,27 @@ header {
 
   #navBar {
     flex-direction: column;
-    gap: 32px;
+    position: relative;
   }
 
   .navlinks {
     flex-direction: column;
     gap: 1.5rem;
+    margin: 4rem 0;
   }
+
+  .icons {
+    margin-bottom: 1.5rem;
+  }
+
+  .hide {
+    display: none;
+  }
+
+
+
+
+
 }
 
 
