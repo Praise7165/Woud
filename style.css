@@ -98,6 +98,20 @@ header {
 }
 
 
+.one {
+  transform: rotate(45deg);
+}
+
+.two {
+  transform: rotate(-45deg)
+             translate(4px, -4px);
+}
+
+.three {
+  display: none;
+}
+
+
 
 
 
@@ -120,11 +134,13 @@ header {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    justify-content: center;
   }
 
   header {
     position: fixed;
     width: 100%;
+    padding: 1.5rem 0;
   }
 
   .topBar {
@@ -151,10 +167,6 @@ header {
   .hide {
     display: none;
   }
-
-
-
-
 
 }
 
