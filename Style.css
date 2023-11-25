@@ -6,26 +6,143 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 @font-face {
     font-family: 'Satoshi';
     src: url('https://drive.google.com/uc?export=view&id=1bdkQMhGCzbjaTBwXFsqbenBLSisAktgV') format('woff2');
     font-weight: 100 900; /* Specify the supported weight range */
-    font-style: normal; /* Variable fonts typically support italics through 'font-style' property */
-    font-variation-settings: 'wght' 100, 'ital' 1; /* Variable font settings */ 
+    font-style: normal; /* Set default style to normal. Variable fonts typically support italics through 'font-style' property */
+    font-variation-settings: 'wght' 100, 'ital' 1; /* Variable font settings*/
 }
+
+
   
 body {
   font-family: 'Satoshi', sans-serif;
-  font-weight: 500; /* Change font weight */
-  /* font-style: italic; /* Apply italic style */ 
+  font-size: 16px;
+  color: #616161;
+
 }
 
-h1 {
-    font-size: 72px;
+
+
+.wrapper {
+  padding: 96px 0;
 }
 
-p {
-    font-size: 16px;
-    font-weight: 400;
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menuBar {
+  display: none;
+}
+
+.menuBar div {
+  background-color: #121212;
+  height: 2px;
+  width: 1.5rem;
+  border-radius: 2px;
+}
+
+
+header {
+  padding: 1.25rem 0 1rem 0;
+  border-bottom: 1px solid hsl(0, 0%, 95%);
+}
+
+
+#navBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.icons, .navlinks {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.icons {
+  column-gap: 1rem;
+}
+
+
+.navlinks a {
+  line-height: 160%;
+  color: #121212;
+
+}
+
+
+.navlinks a:hover {
+  line-height: 160%;
+  color: #DC2F02;
+}
+
+
+
+
+
+
+/* Tablet CSS */
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: none;
+    padding: 0 56px;
+  }
+}
+
+
+/* Mobile - Landcape CSS */
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 32px;
+  }
+  .menuBar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  #navBar {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .navlinks {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+
+/* Mobile - Portrait CSS */
+@media screen and (max-width: 479px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
