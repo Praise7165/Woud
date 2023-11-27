@@ -191,20 +191,43 @@ button {
 
 .marquee > div {
   display: flex;
+  justify-content: center;
   gap: 120px;
   animation: marquee 10s linear infinite;
 }
 
 
 @keyframes marquee {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translateX(20%); /* Start off-screen */
   }
-
-  to {
-    transform: translate(-100%);
+  100% {
+    transform: translateX(-120%); /* Move to the left */
   }
 }
+
+
+
+@keyframes marquee-pad {
+  0% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(-160%);
+  }
+}
+
+@keyframes marquee-mobile {
+  0% {
+    transform: translateX(5%)
+  }
+
+  100% {
+    transform: translateX(-240%);
+  }
+}
+
 
 
 
@@ -225,6 +248,11 @@ button {
 
   .hero-container > div {
     max-width: 90%;
+  }
+
+  .marquee > div {
+    gap: 96px;
+    animation: marquee-pad 10s linear infinite;
   }
 }
 
@@ -294,6 +322,12 @@ button {
 
   .hero-container > div {
     max-width: 100%;
+  }
+
+  .marquee > div {
+    display: flex;
+    gap: 72px;
+    animation: marquee-mobile 20s linear infinite;
   }
 
 }
