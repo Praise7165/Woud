@@ -266,6 +266,10 @@ button {
   }
 
 
+  .hero-container > div {
+    width: 100%;
+  }
+
 }
 
 
