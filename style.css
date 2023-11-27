@@ -183,6 +183,29 @@ button {
   max-width: 80%;
 }
 
+.marquee {
+  background-color: #DC2F02;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+.marquee > div {
+  display: flex;
+  gap: 120px;
+  animation: marquee 10s linear infinite;
+}
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translate(-100%);
+  }
+}
+
 
 
 
