@@ -69,10 +69,12 @@ header {
 }
 
 
+
 #navBar {
   display: flex;
   justify-content: space-between;
 }
+
 
 
 .icons, .navlinks {
@@ -112,6 +114,12 @@ header {
 }
 
 
+.stroke {
+  transition: transform .3s ease-in;
+}
+
+
+
 
 
 
@@ -130,6 +138,7 @@ header {
   .container {
     padding: 0 32px;
   }
+
   .menuBar {
     display: flex;
     flex-direction: column;
@@ -141,7 +150,18 @@ header {
     position: fixed;
     width: 100%;
     padding: 1.5rem 0;
+    height: 72px;
+    overflow: hidden;
+    transition: height .3s ease;
   }
+
+  .expand {
+    height: 400px;
+    transition: height .3s ease;
+  }
+
+
+
 
   .topBar {
     display: flex;
@@ -154,6 +174,8 @@ header {
     position: relative;
   }
 
+
+
   .navlinks {
     flex-direction: column;
     gap: 1.5rem;
@@ -161,11 +183,7 @@ header {
   }
 
   .icons {
-    margin-bottom: 1.5rem;
-  }
-
-  .hide {
-    display: none;
+    margin-bottom: 1rem;
   }
 
 }

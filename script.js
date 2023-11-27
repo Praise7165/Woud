@@ -1,7 +1,6 @@
 
 
-
-const navBar = document.querySelector("#navBar").children;
+const header = document.querySelector("header");
 const menuBar = document.querySelector(".menuBar");
 const strokes = Array.from(document.querySelectorAll(".menuBar div"));
 
@@ -11,9 +10,9 @@ console.log(strokes);
 
 
 menuBar.addEventListener('click', () => {
-    iconsNavlink.forEach(child => {
-        child.classList.toggle("hide");
-    });
+
+    header.classList.toggle("expand");
+
 
     strokes[0].classList.toggle("one");
     strokes[1].classList.toggle("two");
