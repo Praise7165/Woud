@@ -4,9 +4,6 @@ const header = document.querySelector("header");
 const menuBar = document.querySelector(".menuBar");
 const strokes = Array.from(document.querySelectorAll(".menuBar div"));
 
-const iconsNavlink = Array.from(navBar).slice(1);
-
-console.log(strokes);
 
 
 menuBar.addEventListener('click', () => {
