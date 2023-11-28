@@ -468,9 +468,23 @@ h2 {
     gap: 1rem;
   }
 
+ .section-content {
+    gap: 4rem;
+  }
+
 
   .header-content div, .header-content p, .section-content > div {
     width: 100%;
+  }
+
+  #placeholder-img {
+    height: 20rem;
+  }
+
+  .room > :last-child {
+    width: 70%;
+    height: 12rem;
+    top: 35%;
   }
 
 }
