@@ -26,6 +26,10 @@ body {
   color: #121212;
 }
 
+img {
+  max-width: 100%;
+}
+
 
 
 .wrapper {
@@ -202,7 +206,7 @@ button {
     transform: translateX(20%); /* Start off-screen */
   }
   100% {
-    transform: translateX(-120%); /* Move to the left */
+    transform: translateX(-100%); /* Move to the left */
   }
 }
 
@@ -227,6 +231,118 @@ button {
     transform: translateX(-240%);
   }
 }
+
+.category {
+  padding: 104px 0;
+}
+
+.header-content, .section-content {
+  display: flex;
+  gap: 120px;
+}
+
+
+.section-content {
+  position: relative;
+}
+
+.header-content div, .header-content p, .section-content > div {
+  width: 50%;
+}
+
+.category img {
+  height: 24px;
+}
+
+.room > :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid hsl(0, 0%, 95%); 
+
+}
+
+.room > :first-child.last {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.header-content {
+  margin-bottom: 4rem;
+  align-items: flex-end;
+}
+
+.subheading {
+  color: #DC2F02;
+  line-height: 1.5;
+  font-weight: 500;
+  
+}
+
+
+h2 {
+  margin-top: .5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+
+.room > :last-child {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: -1000;
+  width: calc(50% - 60px);
+  height: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 1rem;
+}
+
+#placeholder-img {
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://www.figma.com/file/GKSF3KQir9S2QF0Z3FAuR8/image/d01dac3a0581fda857c8a31324abfc1b2a0d0e0d");
+  z-index: 500;
+  border-radius: 1rem;
+}
+
+
+.room-one {
+  background-image: url("https://s3-alpha-sig.figma.com/img/ae9d/6b21/23be8c49ec2cc84ef1a5e109fe095c52?Expires=1702252800&Signature=nYug-Hm9Y58L~nae1KwmfvOibfK7oM9AKtKpzjBERM7BQoklSyDIayhy3knGSqQBVZ8-FLfUgV7TyiXG2ma1HlQddv79VEss68OKY-yBqMzNiSox0bCZtTv-p6GVb4u5jxuKjxnD~JVk-bYRr4ry8x2vHgvKE7KwGjb8A27gwt0a9moisPlgWGk5~1HR-B2yrHnr2HNTfQ3UB7Ybxm4C~jF8NU3VaMd1fwCuXKWFLRUYX9oQiIeLjp0uhO-pizmW3xRrczylHRq8C6W8Kl8XWkL5HG-AQHzhhNMq-3wt~9yROta0I6ZxoXFcx8138yyWjP9kTpMHs1c0zeBF6cQmkg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+
+.room-two {
+  background-image: url("https://s3-alpha-sig.figma.com/img/23ba/c6eb/315aea145051529a30f8eb94b007688c?Expires=1702252800&Signature=CTuVkbUTOSLZCLp5kMNaWj1nU-mMmU2VabJC7hI89wfrWqBNv7Tur0NdEankhoJoiP9U5bSUk5YTdt0rI9o~vPbM-44TpTjDhYc5yUMzyjkEvU32DD-X6FN1b2hS8yo8qbCpxonMQUT8edRpaCdeZQKP9WCwD5pcP4Mqkp7ZphH4gS6HmsWbDINPvPy68fnOiazGq2vXpx35zdnpuYXPesEcBTImeU4nOGJNfbvExzXY2XN7McMMPYVrts-B6NlxgR9O5clGFKLpNQUiBZOmcozVySQHcrPbvviEMJe6xrRQ5ToOkzxcTXpKqhGmn0SqN0tT~tyyCg~iSb8YlmQsEw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+.room-three {
+  background-image: url("https://s3-alpha-sig.figma.com/img/73ed/a989/ecbf29a1c9b87b12224f4c382376b2ce?Expires=1702252800&Signature=lm2FGm8ZZZYcaQveEX1sX8X~JtCk5Rihri4nqHblr-apIGtP9DohW3RgGAOgNv0~F4NnDGAt86t-fQphJV1t4-ROR~G0GNccPliBeX-6PE-j7D76OdMQrSf9EaSR78oKEPIZfNsS6HAmrmFfqunvwxTqcjkZ8JLBIYJKqcLHgL7~7Dsce04aDYJR4QmucLE5eD-aJ~QV4Df6e~FTz9yWQleWccyhEt~69jZhufW93fR8aeoIzTn0ArjacMJayeEIezmBqGvx489Czjp8Kt47vxSNVjsLdIPNbS5TB8vXo~CbFGR36NP3bxh-sOdMH9NPmD6kC-AHAkvQNbZYyOQ00A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+.room-four {
+  background-image: url("https://s3-alpha-sig.figma.com/img/2c63/8355/20d9183a0174cbfe3d683104a60b8674?Expires=1702252800&Signature=NLnqxSip0LT--qOgccA~SAVftYlp0sdHw1aXqqR1Ds4NlyogJmrOVCnCzkSQCqwKt8MyshGYyJC38PqTvxbg~MIQ4oOFwWwzLBLaqdlWOZPFdMUc11ZEown3N52QI7eaHW3qvCz5cnrZPsqs88ZQmdhDWMXtRlAxtd64zJFlb5ogdNI93kvZwMGLTpSw7xk3vmaWmg1WQPYxzBdVFhhi5xZgEpROL1wr91YMmwVlKmeEXG0KoLrQ9XqzgDtESWj7MFTrveUEBQiYz0A4VqhQErPUydQTSJzZRDX-0oPE91kLR3i6Mr-8AWMogQQhJWAptJ7ZOj95SGNrxVmnONCNtA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+.room-five {
+  background-image: url("https://s3-alpha-sig.figma.com/img/51c1/0967/935120a6e2f860694cd0900e28761c97?Expires=1702252800&Signature=ZIQ2S8wY-i-wHjF2l3poR7PExxllX2KbXSgRm7x2lHNpsTVzc-rHAa18hqsshVWlSmZz6SMc9k4Jb5-P1nQLniKCB8P1YrLIzFUN2IPlvh3hCcfecEKpYcVvwTPeAYUOm2jvqNEDaQ9h3NkB6lL9kfZ~ARxd-gACgSSklchuqzk6w5IJfHnLF-sDC1rxydi~1qBkgmTSzhmWCVYtaRor3Rtv1sM~bdrNQABeqKlyZIUHogOMUtMIE3zGdjxdGdMkDCmuHtsp~uTD8uS2pt-vUSCQVCOuRMgEns5bra4KPPZ4g6Bm6G7wW-ZCCMXmt7YrjNzimgzZp0PKVT2oAGOE~g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+}
+
+
+
+.room span {
+  font-size: 1.5rem;
+  color: #616161;
+}
+
+.room img, .room span, .room-image {
+  transition: all .3s ease-in;
+}
+
 
 
 
@@ -254,7 +370,23 @@ button {
     gap: 96px;
     animation: marquee-pad 10s linear infinite;
   }
+
+  .header-content, .section-content {
+    display: flex;
+    gap: 48px;
+  }
+
+  .room > :last-child {
+    width: calc(50% - 24px);
+    border-radius: .5rem;
+  }
+
+  #placeholder-img {
+    border-radius: .5rem;
+  }
+
 }
+
 
 
 /* Mobile - Landcape CSS */
@@ -328,6 +460,17 @@ button {
     display: flex;
     gap: 72px;
     animation: marquee-mobile 20s linear infinite;
+  }
+
+  .header-content, .section-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+
+  .header-content div, .header-content p, .section-content > div {
+    width: 100%;
   }
 
 }
