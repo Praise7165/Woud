@@ -3,7 +3,7 @@ const menuBar = document.querySelector(".menuBar");
 const sliderWrapper = document.querySelector(".featured .container");
 const sliderContainer = document.querySelector(".product-wrapper");
 const controls = Array.from(document.querySelector(".featured .header-content > :last-child").children);
-const sliderItems = sliderContainer.querySelectorAll('.product-card');
+const sliderItems = slider.querySelectorAll('.product-card');
 const strokes = Array.from(document.querySelectorAll(".menuBar div"));
 const rooms = Array.from(document.querySelectorAll(".room"));
 
@@ -56,7 +56,9 @@ rooms.forEach(room => {
 
 
 
-const totalItemsWidth = sliderContainer.getBoundingClientRect().width;
+
+
+const totalItemsWidth = sliderItems.length * 320;
 let currentIndex = 0;
 
 function moveSlider(direction) {
