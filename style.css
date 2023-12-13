@@ -68,6 +68,9 @@ header {
   padding: 1.25rem 0 1rem 0;
   border-bottom: 1px solid hsl(0, 0%, 95%);
   background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
 }
 
 
@@ -171,7 +174,7 @@ button {
   background-color: #cf3812;
 }
 
-#sec-button {
+.sec-button {
   background-color: transparent;
   color: #DC2F02;
   border: 1px solid #DC2F02;
@@ -344,10 +347,80 @@ h2 {
 }
 
 
+.featured {
+  background: #FBFBFB;
+  padding: 104px 0;
+  overflow-x: hidden;
+}
+
+
+
+.featured .header-content {
+  justify-content: space-between;
+}
+
+.featured .header-content > div {
+  width: auto;
+}
+
+.control {
+  border: 1px solid #DC2F02;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.featured .header-content > :last-child, .product-wrapper {
+  display: flex;
+  gap: 1.5rem;
+}
 
 
 
 
+.product-wrapper {
+
+  width: calc((320px * 9) + 192px);
+  display: flex;
+  transition: all .3s ease-in; 
+}
+
+
+
+
+.product-card {
+  background-color: white;
+  padding: 1.25rem;
+  /* width: 320px; */
+  flex: 0 0 320px;
+  /* margin-right: 24px; */
+  border-radius: .5rem;
+}
+
+
+.product-card:last-child {
+  margin-right: 0;
+}
+
+.product-card > :first-child {
+  background-color: #FBFBFB;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+h3, .product-card span {
+  font-size: 1.25rem;
+}
+
+.product-card span {
+  display: block;
+  margin: .8rem 0 1.25rem 0;
+}
+
+.product-card img {
+  margin: auto;
+}
 
 
 
@@ -403,8 +476,6 @@ h2 {
   }
 
   header {
-    position: fixed;
-    width: 100%;
     padding: 1.5rem 0;
     height: 72px;
     overflow: hidden;
