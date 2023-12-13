@@ -1,14 +1,14 @@
 const header = document.querySelector("header");
 const menuBar = document.querySelector(".menuBar");
-const sliderWrapper = document.querySelector(".featured .container");
-const sliderContainer = document.querySelector(".product-wrapper");
+const slider = document.querySelector(".featured .container");
+const productWrapper = document.querySelector(".product-wrapper");
 const controls = Array.from(document.querySelector(".featured .header-content > :last-child").children);
 const sliderItems = slider.querySelectorAll('.product-card');
 const strokes = Array.from(document.querySelectorAll(".menuBar div"));
 const rooms = Array.from(document.querySelectorAll(".room"));
 
-const leftArrow = controls[0];
-const rightArrow = controls[1];
+const prevButton = controls[0];
+const nextButton = controls[1];
 
 menuBar.addEventListener('click', () => {
 
@@ -57,32 +57,64 @@ rooms.forEach(room => {
 
 
 
+let currentPosition = 0;
 
-const totalItemsWidth = sliderItems.length * 320;
-let currentIndex = 0;
 
-function moveSlider(direction) {
-  currentIndex += direction; // Update index based on click
-  if (currentIndex < 0) currentIndex = 0; // Prevent negative index
-  if (currentIndex >= sliderItems.length) currentIndex = sliderItems.length - 1; // Prevent exceeding item count
 
-  // Calculate new transform value
-  const newTransformX = -currentIndex * 320;
 
-  // Check for last item and adjust if needed
-  if (currentIndex === sliderItems.length - 1) {
-    newTransformX = -totalItemsWidth + sliderContainer.clientWidth;
-  }
 
-  // Update slider position
-  sliderContainer.style.transform = `translateX(${newTransformX}px)`;
+// function to check disable arrow if slider position is 0 or 
+// has reach the extreme end
+
+function checkArrow() {
+
+    if (currentPosition === 0) {
+        prevButton.classList.add("disabled");
+    } else {
+        prevButton.classList.remove("disabled");
+    }
+
+
+    let wrapperWidth = productWrapper.getBoundingClientRect().width;
+    let sliderWidth = slider.getBoundingClientRect().width;
+
+    if (currentPosition <= sliderWidth - wrapperWidth) {
+        nextButton.classList.add("disabled");
+    } else {
+        nextButton.classList.remove("disabled");
+    }
 }
 
-// Bind click events to arrow buttons
-leftArrow.addEventListener("click", () => moveSlider(-1));
-rightArrow.addEventListener("click", () => moveSlider(1));
 
 
 
 
+let currentIndex = 0;
 
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % 9; // Adjust the number based on the number of cards
+    updateSlider();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + 9) % 9; // Adjust the number based on the number of cards
+    updateSlider();
+}
+
+function updateSlider() {
+
+    const sliderContent = document.querySelector(".product-wrapper");
+    const cardWidth = document.querySelector(".product-card").offsetWidth + 24; // Adjusted width including margin
+    sliderContent.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+}
+
+
+
+nextButton.addEventListener("click", () => {
+    nextSlide();
+});
+
+
+prevButton.addEventListener("click", () => {
+    prevSlide();
+});
