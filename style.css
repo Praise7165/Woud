@@ -387,16 +387,12 @@ h2 {
 }
 
 
-
-
 .product-card {
   background-color: white;
   padding: 1rem;
   flex: 0 0 320px;
   border-radius: .5rem;
 }
-
-
 
 
 .product-card > :first-child {
@@ -417,6 +413,7 @@ h3, .product-card span {
   display: block;
   margin: .8rem 0 1.25rem;
 }
+
  .product-button {
   padding: .4rem .5rem;
  }
