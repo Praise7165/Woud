@@ -5,11 +5,9 @@
     box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 @font-face {
     font-family: 'Satoshi';
@@ -19,8 +17,6 @@ html {
     font-variation-settings: 'wght' 100, 'ital' 1; /* Variable font settings*/
 }
 
-
-  
 body {
   font-family: 'Satoshi', sans-serif;
   color: #121212;
@@ -30,19 +26,15 @@ img {
   max-width: 100%;
 }
 
-
-
 .wrapper {
   padding: 96px 0;
 }
-
 
 .container {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 32px;
 }
-
 
 li {
   list-style-type: none;
@@ -63,7 +55,6 @@ a {
   border-radius: 2px;
 }
 
-
 header {
   padding: 1.25rem 0 1rem 0;
   border-bottom: 1px solid hsl(0, 0%, 95%);
@@ -73,14 +64,10 @@ header {
   z-index: 2000;
 }
 
-
-
 #navBar {
   display: flex;
   justify-content: space-between;
 }
-
-
 
 .icons, .navlinks {
   display: flex;
@@ -91,19 +78,16 @@ header {
   column-gap: 1rem;
 }
 
-
 .navlinks a {
   line-height: 160%;
   color: #121212;
 
 }
 
-
 .navlinks a:hover {
   line-height: 160%;
   color: #DC2F02;
 }
-
 
 .one {
   transform: rotate(45deg);
@@ -117,7 +101,6 @@ header {
 .three {
   display: none;
 }
-
 
 .stroke {
   transition: transform .3s ease-in;
@@ -203,7 +186,6 @@ button {
   animation: marquee 10s linear infinite;
 }
 
-
 @keyframes marquee {
   0% {
     transform: translateX(20%); /* Start off-screen */
@@ -212,8 +194,6 @@ button {
     transform: translateX(-100%); /* Move to the left */
   }
 }
-
-
 
 @keyframes marquee-pad {
   0% {
@@ -239,45 +219,19 @@ button {
   padding: 104px 0;
 }
 
-.category .header-content, .section-content, .about-us .container {
+.header-content {
   display: flex;
+  margin-bottom: 4rem;
+  align-items: flex-end;
+  gap: 104px;
 }
 
 .section-content {
-  width: 50%;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-
-.category .header-content, .category .section-content, .about-us .container {
-  flex-direction: row;
-  gap: 120px;
-}
-
-
-
-.header-content {
-  flex-direction: column;
-  width: auto;
-  row-gap: 2rem;
-}
-
-
-.category .section-content {
   position: relative;
   width: auto;
 }
 
-.header-content p {
-  margin-top: 1rem;
-}
-
-.category .header-content p {
-  margin-top: 0;
-}
-
-.category .header-content div, .category .header-content p, .category .section-content > div {
+.header-content div, .header-content p, .section-content > div {
   width: 50%;
 }
 
@@ -301,11 +255,6 @@ button {
   padding-bottom: 0;
 }
 
-.category .header-content {
-  margin-bottom: 4rem;
-  align-items: flex-end;
-}
-
 .subheading {
   color: #DC2F02;
   line-height: 1.5;
@@ -313,13 +262,11 @@ button {
   
 }
 
-
 h2 {
   margin-top: .5rem;
   font-size: 2.5rem;
   font-weight: 700;
 }
-
 
 .room > :last-child {
   background-size: cover;
@@ -341,11 +288,9 @@ h2 {
   border-radius: 1rem;
 }
 
-
 .room-one {
   background-image: url("https://s3-alpha-sig.figma.com/img/ae9d/6b21/23be8c49ec2cc84ef1a5e109fe095c52?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gRHTVnx8U1vgif6awwt~PzjQc-Q7J8lUXNTsKIN8L1Uc-UNFrMyvvpqIsE~FZsCuyK49Y2gW9QVG3RFxq2R-E~PDk5I1b30kX4GesGjwTYBvLxBlI1owbqKF7kJNC7shNgoJsmUxgGaqqQOyJInZ5OHpVOGqyMbHWL8dGJBZqk858ocb09xLgEEDlk9h9drwp0BmUKKChKl68D586J8JjQ14-UdboinQjfpx4SrQyus9zPxFRsvoJ~sYdQpfpKifI7vgW3x3ebXiLuBwFGVUezi-AE3Vv1KvbFgoY8EQz27asFzTv28lP1b71OmikmpsUZEfecRvgbUyy0NQtvOxIQ__");
 }
-
 
 .room-two {
   background-image: url("https://s3-alpha-sig.figma.com/img/23ba/c6eb/315aea145051529a30f8eb94b007688c?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KqGb5O5WxO-cEDMhyyd9dcfZOLghcw8f55OqT-ieVqBa5Y1XHqzBd0x-8qsJZolYF9iWI4JXmGFeVQvJ6Xb1a0VSyCXQZ~O8DEwPD2c8UnV3l7UQUq1~bV2wV0T61C3HIKvSthxtq3PBySGTQplbcQYvfV0WH6nr5nUILvb-LRhQg9AmGIN5Kr6w7qwDNap-I-SudqQt-rj0dtobHMsQpb-NTVSWh9iICN0faof6yIFWBraH-uxuJzkpGVKc5lmeZxQdc1QPcLtU75G-fb9mOVsdFsObQMu5mpLEHTPRvLZGeP-hcyBfApPyqvhk294bIRW04vDVP1lsaLJfeWM5zQ__");
@@ -363,8 +308,6 @@ h2 {
   background-image: url("https://s3-alpha-sig.figma.com/img/51c1/0967/935120a6e2f860694cd0900e28761c97?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZVoe09VCEv5QP0h-2usdm5JvM5taqSukbXPDDd9wgSE3V~O8uqOE4HC6ixFm1lIP641HzfZjRb55tfIs3hwv8dq~htYKxAKQeHG0vIJPpcTRwV~MLaUNBIw7xV0bm9YFCdVZjMKdqKftPwaZyF5TJ2aUcF8lYcl06iHHj5S~RYQBin-6-xxPUcbtjHd0lZcDV2KIau3a8GyTtxAb9SDv02k6RLZitlct~wRhMnmnReFUd~3-bwGB7R4BNZddQpxEh7uYRdlnOUxaA-XTb7DUNjfJtST-bj3noHZkKQNDtGADJDuMjyt4VFzoqXlzlRWQ4y0HqQdt1lfiNPG3KJBYtQ__");
 }
 
-
-
 .room span {
   font-size: 1.5rem;
   color: #616161;
@@ -374,14 +317,11 @@ h2 {
   transition: all .3s ease-in;
 }
 
-
 .featured {
   background: #FBFBFB;
   padding: 104px 0;
   overflow-x: hidden;
 }
-
-
 
 .featured .header-content {
   justify-content: space-between;
@@ -391,24 +331,10 @@ h2 {
   width: auto;
 }
 
-/*
-.control {
-  border: 1px solid #DC2F02;
-  border-radius: 50%;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-}
-*/
-
-
 .featured .header-content > :last-child, .product-wrapper {
   display: flex;
   gap: 1.5rem;
 }
-
-
-
 
 .product-wrapper {
   display: grid;
@@ -417,14 +343,12 @@ h2 {
   column-gap: 1.5rem;
 }
 
-
 .product-card {
   background-color: white;
   padding: 1rem;
   flex: 0 0 320px;
   border-radius: .5rem;
 }
-
 
 .product-card > :first-child {
   background-color: #FBFBFB;
@@ -464,7 +388,6 @@ h3, .product-card span {
   margin-top: 6rem;
 }
 
-
 .content-button {
   margin-top: 2rem;
 }
@@ -493,9 +416,9 @@ h3, .product-card span {
     animation: marquee-pad 10s linear infinite;
   }
 
-  .category .header-content, .category .section-content {
+  .header-content, .section-content {
     display: flex;
-    gap: 48px;
+    gap: 3rem;
   }
 
   .room > :last-child {
@@ -546,9 +469,6 @@ h3, .product-card span {
     transition: height .5s ease;
   }
 
-
-
-
   .topBar {
     display: flex;
     justify-content: space-between;
@@ -592,18 +512,18 @@ h3, .product-card span {
     animation: marquee-mobile 20s linear infinite;
   }
 
-  .category .header-content {
+  .header-content {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
 
- .category .section-content {
-    gap: 4rem;
+  .section-content {
+    flex-direction: column;
   }
 
 
-  .category .header-content div, .category .header-content p, .category .section-content > div, .section-content {
+  .header-content div, .header-content p, .section-content > div {
     width: auto;
   }
 
