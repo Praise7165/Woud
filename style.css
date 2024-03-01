@@ -231,7 +231,7 @@ button {
   width: auto;
 }
 
-.header-content div, .header-content p, .section-content > div {
+.header-content > *, .section-content > div, .about-us .container > * {
   width: 50%;
 }
 
@@ -388,8 +388,18 @@ h3, .product-card span {
   margin-top: 6rem;
 }
 
-.content-button {
-  margin-top: 2rem;
+.about-us .s-content div > p {
+  margin: 1.5rem 0 2.5rem;
+}
+
+.trust-banner h3 {
+  font-size: 2.5rem;
+}
+
+.about-us .container {
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
 }
 
 
@@ -405,6 +415,10 @@ h3, .product-card span {
 
   h1 {
     font-size: 3.25rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
   }
 
   .hero-container > div {
@@ -430,8 +444,13 @@ h3, .product-card span {
     border-radius: .5rem;
   }
 
+  .trust-banner h3 {
+    font-size: 2rem;
+  }
+  
+
   .about-us .container {
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .trust-banner {
@@ -528,7 +547,7 @@ h3, .product-card span {
   }
 
 
-  .header-content div, .header-content p, .section-content > div {
+  .header-content > *, .section-content > div {
     width: auto;
   }
 
@@ -554,6 +573,16 @@ h3, .product-card span {
   .trust-banner {
     margin-top: 4rem;
   }
+
+
+  .about-us .container > * {
+    width: auto;
+  }
+
+  .about-us .container {
+    flex-direction: column;
+  }
+
   
 
 }
