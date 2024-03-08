@@ -187,6 +187,12 @@ button {
   overflow: hidden;
 }
 
+.marquee h2 {
+  color: #FBFBFB;
+  white-space: nowrap;
+}
+
+
 
 .marquee > div {
   justify-content: center;
