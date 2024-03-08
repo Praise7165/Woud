@@ -223,7 +223,7 @@ button {
   }
 }
 
-.category, .about-us, .what-we-do {
+.category, .about-us, .what-we-do, .process, .featured {
   padding: 104px 0;
 }
 
@@ -239,7 +239,7 @@ button {
   width: auto;
 }
 
-.header-content > *, .section-content > div, .about-us .container > *, .what-we-do .container > * {
+.header-content > *, .section-content > div, .about-us .container > *, .what-we-do .container > *, .what-we-do .section-image > * {
   width: 50%;
 }
 
@@ -288,7 +288,7 @@ h2 {
   border-radius: 1rem;
 }
 
-#placeholder-img, .section-image, .what-we-do-image-1, .what-we-do-image-2 {
+#placeholder-img, .section-image, .what-we-do-image-1, .what-we-do-image-2, .process .container > :last-child {
   background-size: cover;
   background-position: center;
   z-index: 500;
@@ -328,10 +328,9 @@ h2 {
   transition: all .3s ease-in;
 }
 
-.featured {
-  background: #FBFBFB;
-  padding: 104px 0;
-  overflow-x: hidden;
+
+.featured, .process {
+  background-color: #FBFBFB;
 }
 
 .featured .header-content {
@@ -432,10 +431,6 @@ h3, .product-card span {
   width: 95%;
 }
 
-.what-we-do .section-image > * {
-  width: 50%;
-}
-
 .what-we-do .section-image {
   gap: 1rem;
   z-index: 98;
@@ -447,7 +442,6 @@ h3, .product-card span {
   position: absolute;
   top: 0%;
   bottom: 0%;
-  /*left: 56%;*/
   right: -64px;
 }
 
@@ -457,6 +451,46 @@ h3, .product-card span {
 
 .what-we-do-image-2 {
   background-image: url("https://s3-alpha-sig.figma.com/img/f43e/0a89/86dc34f75e39ad25a7d4de2f4d959fef?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=m4bFReWbIkF6ofDr5JCC~jysOSALjIKuGwPqHIcfwwXADeKuGt4z8xAI5VQTIQ~hshvvlnsdlTQhmO2bAVc4EzhAa-tg~W-s18hPP-8cq7MTZxvgfV-37GY7dyzxEXba~HxRphmFrq0pffGFuZB4h1EKzm7rFk03zcbclCQEh8Lfk~F~GoXyo3lkjnNXukNHLVlH2~oPQUr7cWl~5HwViBMEbZwrqTkvhy2W8oN7WgyaMRN~o3jhLO4bLwJ5lwqtE1~hYs3lrwrK~rGjoqmEUOs7iBcqsQ4kl45gzlMzpStnaAlF1O12H99uSA8v11bwNG3hDjT8VfPdDAwemEN3zA__");
+}
+
+.f-star {
+  position: absolute;
+  height: 48px;
+  top: -32px; 
+}
+
+.about-us .f-star {
+  left: 24px;
+  width: auto;
+}
+
+
+.what-we-do .f-star {
+  left: 50%;
+  width: auto;
+}
+
+.process {
+  background-color: #FBFBFB;
+}
+
+.process .container > :first-child {
+  /*width: 60%;*/
+  max-width: 640px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.process p {
+  margin: 1rem 0 3.5rem;
+}
+
+.process .container > :last-child {
+  background-image: url(./assets/process.jpg);
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -543,6 +577,10 @@ h3, .product-card span {
   .what-we-do .section-image > * {
     width: 100%;
     border-radius: .5rem;
+  }
+
+  .process .container > :last-child {
+    height: 400px;
   }
 
 }
