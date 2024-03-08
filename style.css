@@ -36,6 +36,10 @@ img {
   padding: 0 32px;
 }
 
+.icons, .navlinks, #navBar, .hero-container, .marquee > div, .header-content, .room > :first-child, .featured .header-content > :last-child, .product-wrapper, .offering, .offerings, .trust-banner, .about-us .container, .what-we-do .container, .what-we-do .section-image {
+  display: flex;
+}
+
 li {
   list-style-type: none;
 }
@@ -64,13 +68,13 @@ header {
   z-index: 2000;
 }
 
+
+
 #navBar {
-  display: flex;
   justify-content: space-between;
 }
 
 .icons, .navlinks {
-  display: flex;
   column-gap: 1.5rem;
 }
 
@@ -110,11 +114,11 @@ header {
   padding-top: 5rem;
 }
 
+
 .hero-container > div {
   max-width: 80%;
   margin: auto;
   text-align: center;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -132,6 +136,10 @@ h1 {
   font-size: 4rem;
   font-weight: 700;
   text-transform: capitalize;
+}
+
+h4 {
+  font-size: 1.125rem;
 }
 
 p {
@@ -179,8 +187,8 @@ button {
   overflow: hidden;
 }
 
+
 .marquee > div {
-  display: flex;
   justify-content: center;
   gap: 120px;
   animation: marquee 10s linear infinite;
@@ -215,12 +223,12 @@ button {
   }
 }
 
-.category, .about-us {
+.category, .about-us, .what-we-do {
   padding: 104px 0;
 }
 
+
 .header-content {
-  display: flex;
   margin-bottom: 4rem;
   align-items: flex-end;
   gap: 104px;
@@ -231,7 +239,7 @@ button {
   width: auto;
 }
 
-.header-content > *, .section-content > div, .about-us .container > * {
+.header-content > *, .section-content > div, .about-us .container > *, .what-we-do .container > * {
   width: 50%;
 }
 
@@ -239,8 +247,8 @@ button {
   height: 24px;
 }
 
+
 .room > :first-child {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 2.5rem;
@@ -280,12 +288,15 @@ h2 {
   border-radius: 1rem;
 }
 
-#placeholder-img, .section-image {
+#placeholder-img, .section-image, .what-we-do-image-1, .what-we-do-image-2 {
   background-size: cover;
   background-position: center;
-  background-image: url("https://www.figma.com/file/GKSF3KQir9S2QF0Z3FAuR8/image/d01dac3a0581fda857c8a31324abfc1b2a0d0e0d");
   z-index: 500;
   border-radius: 1rem;
+}
+
+#placeholder-img {
+  background-image: url("https://www.figma.com/file/GKSF3KQir9S2QF0Z3FAuR8/image/d01dac3a0581fda857c8a31324abfc1b2a0d0e0d");
 }
 
 .room-one {
@@ -332,7 +343,6 @@ h2 {
 }
 
 .featured .header-content > :last-child, .product-wrapper {
-  display: flex;
   gap: 1.5rem;
 }
 
@@ -381,8 +391,9 @@ h3, .product-card span {
   background-image: url("https://s3-alpha-sig.figma.com/img/e21e/f5e6/4c4541be55748076592014c901b4ff48?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pxkrQ88Fam0ZyavrKO1bPNLcqFqO8DynlyJKkBigD3jdAWBIOso2p9KwxZuKcXeN2bV9xAxJ4FvNyyKLuXIUI4mFfD1hHw3orEMqBIYIqX09T3kSD48KYxw4a4O0n23YbHJKx7LhCFk7kTutYCS-Qw~zNlJrtkaNgjognIeiN6BALk8BEarNWYZWq5ArvxTCFFvtcUn1Yy8eutN0dROSpfQnLFOpft~nNhdC3Rd0d1eB1R4V8XtD8M5ClX6gCwES1Z27L93iHFIh~FB1eQG1-KEHOEyig2VtAkYwTaugBwcPBJtSWpWpwUk1zem1mrk7Ngv1HYGTrtlH~ZBkuLrMDQ__");
 }
 
+
+
 .trust-banner {
-  display: flex;
   gap: 2rem;
   justify-content: space-between;
   margin-top: 6rem;
@@ -396,11 +407,58 @@ h3, .product-card span {
   font-size: 2.5rem;
 }
 
-.about-us .container {
-  display: flex;
-  gap: 80px;
-  justify-content: space-between;
+.about-us .container, .what-we-do .container {
+  gap: 5rem;
+  position: relative;
 }
+
+.what-we-do {
+  overflow: hidden;
+}
+
+.offerings {
+  margin-top: 2.5rem;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.offering {
+  align-items: first baseline;
+  gap: 1rem;
+}
+
+.offering p {
+  margin-top: .5rem;
+  width: 95%;
+}
+
+.what-we-do .section-image > * {
+  width: 50%;
+}
+
+.what-we-do .section-image {
+  gap: 1rem;
+  z-index: 98;
+  width: 50%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  /*left: 56%;*/
+  right: -64px;
+}
+
+.what-we-do-image-1 {
+  background-image: url("https://s3-alpha-sig.figma.com/img/8a2b/6bc2/6dcb5316620d0ffb5f49eee0c5770fbe?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=l1ZtxHRoU3AzZrsfBrFEO1gCDGe4~8SFOs1KTX-qhIrEpYG0CeqXCobKOJuID2aWByH04R8BoXyhO7ra3G0f3uYwZyEeQh8okVOrnnbMCmG6Idmf2pErf4eSOxxuVzVV-u4F33o4Tx4yoVmqPwswQipj-V4~CpuXGKveoc2NKey3Jw6GeJj8G0Abl6Oicnb0Ed4fUKNfcurCG~K7Acr33kmKG0Q4Q-UQn88ZwmRHgEpX3xisJzhXMXoDGjeGiuJXnnBAqCMc6rXEpxbAP2W4PvMnDL5NGrSh44dEfhfQwxXU68M1HZzEGgkWcjnA4qnglKQv7Rkh4sllVqxQ6RgTPg__");
+}
+
+.what-we-do-image-2 {
+  background-image: url("https://s3-alpha-sig.figma.com/img/f43e/0a89/86dc34f75e39ad25a7d4de2f4d959fef?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=m4bFReWbIkF6ofDr5JCC~jysOSALjIKuGwPqHIcfwwXADeKuGt4z8xAI5VQTIQ~hshvvlnsdlTQhmO2bAVc4EzhAa-tg~W-s18hPP-8cq7MTZxvgfV-37GY7dyzxEXba~HxRphmFrq0pffGFuZB4h1EKzm7rFk03zcbclCQEh8Lfk~F~GoXyo3lkjnNXukNHLVlH2~oPQUr7cWl~5HwViBMEbZwrqTkvhy2W8oN7WgyaMRN~o3jhLO4bLwJ5lwqtE1~hYs3lrwrK~rGjoqmEUOs7iBcqsQ4kl45gzlMzpStnaAlF1O12H99uSA8v11bwNG3hDjT8VfPdDAwemEN3zA__");
+}
+
 
 
 
@@ -456,6 +514,35 @@ h3, .product-card span {
   .trust-banner {
     gap: 1rem;
     margin-top: 2rem;
+  }
+
+  .what-we-do .section-image {
+    position: static;
+    height: 400px;
+  }
+
+  .s-content {
+    order: 2;
+  }
+
+  .what-we-do .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+
+
+  .what-we-do-image-2 {
+    display: none;
+  }
+
+  .what-we-do .container > * {
+    width: auto;
+  }
+
+  .what-we-do .section-image > * {
+    width: 100%;
+    border-radius: .5rem;
   }
 
 }
@@ -577,10 +664,6 @@ h3, .product-card span {
 
   .about-us .container > * {
     width: auto;
-  }
-
-  .about-us .container {
-    flex-direction: column;
   }
 
   
