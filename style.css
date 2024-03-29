@@ -36,7 +36,7 @@ img {
   padding: 0 32px;
 }
 
-.icons, .navlinks, #navBar, .hero-container, .marquee > div, .header-content, .room > :first-child, .featured .header-content > :last-child, .product-wrapper, .offering, .offerings, .trust-banner, .about-us .container, .what-we-do .container, .what-we-do .section-image {
+.icons, .navlinks, #navBar, .hero-container, .marquee > div, .header-content, .room > :first-child, .featured .header-content > :last-child, .product-wrapper, .offering, .offerings, .trust-banner, .about-us .container, .what-we-do .container, .what-we-do .section-image, .controls, .controls div, .review-details, .review-wrapper {
   display: flex;
 }
 
@@ -251,6 +251,10 @@ button {
   height: 24px;
 }
 
+.blog img {
+  height: 100%;
+  border-radius: .5rem;
+}
 
 .room > :first-child {
   align-items: center;
@@ -349,21 +353,25 @@ h2 {
   gap: 1.5rem;
 }
 
-.product-wrapper {
+.product-wrapper, .blog-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   row-gap: 3rem;
   column-gap: 1.5rem;
 }
 
-.product-card {
+.product-card, .blog-card {
   background-color: white;
   padding: 1rem;
   flex: 0 0 320px;
   border-radius: .5rem;
 }
 
-.product-card > :first-child {
+.blog-card {
+  padding: 0;
+}
+
+.product-card > :first-child, .blog-card > :first-child {
   background-color: #FBFBFB;
   height: 320px;
   display: flex;
@@ -371,6 +379,10 @@ h2 {
   justify-content: center;
   margin-bottom: 1rem;
   border-radius: .5rem;
+}
+
+.blog-card > :first-child {
+  height: 272px;
 }
 
 h3, .product-card span {
@@ -386,6 +398,15 @@ h3, .product-card span {
   padding: .4rem .5rem;
 }
 
+.blog-button {
+  padding: 0;
+  border: none;
+}
+
+.blog-card img {
+  width: 100%;
+}
+
 .section-image {
   width: 50%;
 }
@@ -393,8 +414,6 @@ h3, .product-card span {
 .about-us .section-image {
   background-image: url("https://s3-alpha-sig.figma.com/img/e21e/f5e6/4c4541be55748076592014c901b4ff48?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pxkrQ88Fam0ZyavrKO1bPNLcqFqO8DynlyJKkBigD3jdAWBIOso2p9KwxZuKcXeN2bV9xAxJ4FvNyyKLuXIUI4mFfD1hHw3orEMqBIYIqX09T3kSD48KYxw4a4O0n23YbHJKx7LhCFk7kTutYCS-Qw~zNlJrtkaNgjognIeiN6BALk8BEarNWYZWq5ArvxTCFFvtcUn1Yy8eutN0dROSpfQnLFOpft~nNhdC3Rd0d1eB1R4V8XtD8M5ClX6gCwES1Z27L93iHFIh~FB1eQG1-KEHOEyig2VtAkYwTaugBwcPBJtSWpWpwUk1zem1mrk7Ngv1HYGTrtlH~ZBkuLrMDQ__");
 }
-
-
 
 .trust-banner {
   gap: 2rem;
@@ -496,6 +515,58 @@ h3, .product-card span {
   align-items: center;
   justify-content: center;
 }
+
+.blog-card p, .review > p {
+  margin: .5rem 0 1rem;
+}
+
+.blog .main-button {
+  margin: 64px auto 0;
+}
+
+.reviews {
+  background-color: #FBFBFB;
+}
+
+
+.controls div, .review-details {
+  align-items: center;
+}
+
+.controls div {
+  border: 1px solid #b0b0b0;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: 1.25rem;
+  justify-content: center;
+}
+
+.controls {
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.review img {
+  height: 100%;
+}
+
+.review-details, .review-wrapper {
+  gap: 1rem;
+}
+
+.review {
+  background-color: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: .5rem;
+  flex: 0 0 30rem;
+  width: 100%;
+}
+
+
+.review-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
 
 
 
@@ -706,6 +777,10 @@ h3, .product-card span {
 
   .about-us .container > * {
     width: auto;
+  }
+
+  .review {
+    flex: 0 0 80%;
   }
 
   

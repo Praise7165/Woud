@@ -1,14 +1,21 @@
 const header = document.querySelector("header");
 const menuBar = document.querySelector(".menuBar");
-const slider = document.querySelector(".featured .container");
-const productWrapper = document.querySelector(".product-wrapper");
-const controls = Array.from(document.querySelector(".featured .header-content > :last-child").children);
-const sliderItems = slider.querySelectorAll('.product-card');
+const reviewWrapper = document.querySelector(".review-wrapper");
+const reviewCards = Array.from(reviewWrapper.querySelectorAll(".review"));
 const strokes = Array.from(document.querySelectorAll(".menuBar div"));
 const rooms = Array.from(document.querySelectorAll(".room"));
 
-const prevButton = controls[0];
-const nextButton = controls[1];
+const prevButton = document.querySelector(".controls").children[0];
+const nextButton = document.querySelector(".controls").children[1];
+
+
+prevButton.addEventListener("click", handlePrevClick);
+nextButton.addEventListener("click", handleNextClick);
+
+prevButton.disabled = true; // Initially disabled
+
+// to keep track of the currrent card that is visible
+let currentSlideIndex = 0; 
 
 menuBar.addEventListener('click', () => {
 
@@ -56,3 +63,39 @@ rooms.forEach(room => {
 
 
 
+
+// Function to get the width of the review card.
+
+function getRcardWidth() {
+    // element.offsetWidth returns the element layout width including padding and border
+    return reviewCards[0].offsetWidth;
+}
+
+function handlePrevClick() {
+    currentSlideIndex--; 
+    if (currentSlideIndex < 0) {
+        currentSlideIndex = 0; // dont go below 0, stay at the first slide
+        prevButton.disabled = true;
+    } else prevButton.disabled = false; // enable previous button if previously disabled
+
+    scrollToCard(currentSlideIndex);
+}
+
+
+function handleNextClick() {
+    currentSlideIndex++;
+    if (currentSlideIndex >= reviewCards.length) {
+        currentSlideIndex = reviewCards.length - 1; // make sure that the clicks doesnt poass the number of cards
+        nextButton.disabled = true;
+    } else nextButton.disabled = false;
+
+    scrollToCard(currentSlideIndex);
+}
+
+
+
+
+function scrollToCard(slideIndex) {
+    slideWidth = getRcardWidth();
+    reviewWrapper.scrollBy({left: slideIndex * slideWidth, behavior: "smooth"});
+}
