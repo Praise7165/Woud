@@ -8,14 +8,15 @@ const rooms = Array.from(document.querySelectorAll(".room"));
 const prevButton = document.querySelector(".controls").children[0];
 const nextButton = document.querySelector(".controls").children[1];
 
+let currentSlideIndex = 0; 
 
 prevButton.addEventListener("click", handlePrevClick);
 nextButton.addEventListener("click", handleNextClick);
 
-prevButton.disabled = true; // Initially disabled
+// prevButton.disabled = true; // Initially disabled
 
 // to keep track of the currrent card that is visible
-let currentSlideIndex = 0; 
+
 
 menuBar.addEventListener('click', () => {
 
@@ -71,31 +72,66 @@ function getRcardWidth() {
     return reviewCards[0].offsetWidth;
 }
 
+
+
 function handlePrevClick() {
-    currentSlideIndex--; 
-    if (currentSlideIndex < 0) {
+    
+    if (currentSlideIndex >= reviewCards.length) {
+        currentSlideIndex -= 2;
+    }
+    else if (currentSlideIndex <= 0) {
         currentSlideIndex = 0; // dont go below 0, stay at the first slide
         prevButton.disabled = true;
-    } else prevButton.disabled = false; // enable previous button if previously disabled
+    }  else {
+        currentSlideIndex--; 
+        prevButton.disabled = false; // enable previous button if previously disabled
+    }
 
-    scrollToCard(currentSlideIndex);
+    
+    scrollToSlide(currentSlideIndex);
+    console.log(currentSlideIndex);
 }
+
+/*
+function handleNextClick() {
+    
+    if (currentSlideIndex >= reviewCards.length) {
+        currentSlideIndex = reviewCards.length - 2; // make sure that the clicks doesnt poass the number of cards
+        nextButton.disabled = true;
+    } else {
+        nextButton.disabled = false;
+        currentSlideIndex++;
+    }
+
+    scrollToSlide(currentSlideIndex);
+    console.log(currentSlideIndex);
+}
+*/
 
 
 function handleNextClick() {
-    currentSlideIndex++;
-    if (currentSlideIndex >= reviewCards.length) {
-        currentSlideIndex = reviewCards.length - 1; // make sure that the clicks doesnt poass the number of cards
+    
+    if (currentSlideIndex == reviewCards.length - 1) {
         nextButton.disabled = true;
-    } else nextButton.disabled = false;
+    } else {
+        currentSlideIndex++;
+        nextButton.disabled = false;   
+    }
 
-    scrollToCard(currentSlideIndex);
+    scrollToSlide(currentSlideIndex);
+    console.log(currentSlideIndex);
 }
 
 
 
 
-function scrollToCard(slideIndex) {
-    slideWidth = getRcardWidth();
-    reviewWrapper.scrollBy({left: slideIndex * slideWidth, behavior: "smooth"});
+
+function scrollToSlide(slideIndex) {
+    // slideWidth = getRcardWidth();
+    scrollAmount = getRcardWidth() * slideIndex;
+
+    reviewWrapper.scrollTo({left: scrollAmount, behavior: "smooth"});
+    
+    console.log(reviewWrapper.scrollLeft);
 }
+
