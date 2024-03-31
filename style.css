@@ -17,7 +17,7 @@ html {
     font-variation-settings: 'wght' 100, 'ital' 1; /* Variable font settings*/
 }
 
-body {
+body, input::placeholder {
   font-family: 'Satoshi', sans-serif;
   color: #121212;
 }
@@ -36,7 +36,7 @@ img {
   padding: 0 32px;
 }
 
-.icons, .navlinks, #navBar, .hero-container, .marquee > div, .header-content, .room > :first-child, .featured .header-content > :last-child, .product-wrapper, .offering, .offerings, .trust-banner, .about-us .container, .what-we-do .container, .what-we-do .section-image, .controls, .controls div, .review-details, .review-wrapper {
+.icons, .navlinks, #navBar, .hero-container, .marquee > div, .header-content, .room > :first-child, .featured .header-content > :last-child, .product-wrapper, .offering, .offerings, .trust-banner, .about-us .container, .what-we-do .container, .what-we-do .section-image, .controls, .controls div, .review-details, .review-wrapper, .newsletter-wrapper, .product-card > :first-child, .blog-card > :first-child, .newsletter-wrapper > div, .newsletter form > div {
   display: flex;
 }
 
@@ -227,7 +227,7 @@ button {
   }
 }
 
-.category, .about-us, .what-we-do, .process, .featured {
+.category, .about-us, .what-we-do, .process, .featured, .newsletter {
   padding: 104px 0;
 }
 
@@ -296,7 +296,7 @@ h2 {
   border-radius: 1rem;
 }
 
-#placeholder-img, .section-image, .what-we-do-image-1, .what-we-do-image-2, .process .container > :last-child {
+#placeholder-img, .section-image, .what-we-do-image-1, .what-we-do-image-2, .process .container > :last-child, .newsletter-wrapper {
   background-size: cover;
   background-position: center;
   z-index: 500;
@@ -325,6 +325,53 @@ h2 {
 
 .room-five {
   background-image: url("https://s3-alpha-sig.figma.com/img/51c1/0967/935120a6e2f860694cd0900e28761c97?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZVoe09VCEv5QP0h-2usdm5JvM5taqSukbXPDDd9wgSE3V~O8uqOE4HC6ixFm1lIP641HzfZjRb55tfIs3hwv8dq~htYKxAKQeHG0vIJPpcTRwV~MLaUNBIw7xV0bm9YFCdVZjMKdqKftPwaZyF5TJ2aUcF8lYcl06iHHj5S~RYQBin-6-xxPUcbtjHd0lZcDV2KIau3a8GyTtxAb9SDv02k6RLZitlct~wRhMnmnReFUd~3-bwGB7R4BNZddQpxEh7uYRdlnOUxaA-XTb7DUNjfJtST-bj3noHZkKQNDtGADJDuMjyt4VFzoqXlzlRWQ4y0HqQdt1lfiNPG3KJBYtQ__");
+}
+
+.newsletter-wrapper {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+                    url("https://s3-alpha-sig.figma.com/img/75b1/116c/e67aad51d168f48ad6e26a0ec8fdb4f5?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LoixXKidcQK-cVUCCxeoFVhHXRVGIeFuFdDQtYC6XPHMpVu7EkNTCkJ8hY~HV61kBF8LJiKxC6wQzw0y-6AflyhOdxnYSBXesPKgEni6SVU0didr4ryVgLo4C-4-Bisg947xUKTUBPWaVvHbnAsTcO7YJFRoluN6lj-w2ppPNiOZbWmJLV4JpV5ZWkYl65tVYzD1dOUaTighSMNu72BPJ1QOjfv4tM8RVLyPH-cWwpclIXiKowOk29NeiB0Ltn1JVshIecwjOvIbKmte1kM-MkR2MzVqxdOZzoh3o0JpjgDG3h~t11qaLBRZ6QJjXLI6pvja2eW245ZPp4dzHlx~aA__");
+  padding: 104px 0;
+  border-radius: 26px;
+  text-align: center;
+  color: #fff
+}
+
+.newsletter-wrapper > div {
+  max-width: 600px;
+  flex-direction: column;
+}
+
+.newsletter p {
+  color: #fff;
+  margin: 1rem 0 2rem 0;
+}
+
+.newsletter form {
+  width: 100%;
+  max-width: 480px;
+}
+
+.newsletter form > div {
+  background-color: #fff;
+  padding: 0.3rem 0.5rem 0.3rem 1rem;
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.newsletter .main-button {
+  margin: 0 0 0 .7rem;
+  flex-shrink: 0;
+}
+
+.newsletter input {
+  height: 100%;
+  padding: .7rem 0;
+  flex: 1;
+  border: none;
+}
+
+.newsletter input::placeholder {
+  font-size: .9rem;
 }
 
 .room span {
@@ -371,12 +418,15 @@ h2 {
   padding: 0;
 }
 
+.product-card > :first-child, .blog-card > :first-child, .newsletter-wrapper, .process .container > :last-child, .controls div, .newsletter-wrapper > div, .newsletter form > div{
+  align-items: center;
+  justify-content: center;
+}
+
+
 .product-card > :first-child, .blog-card > :first-child {
   background-color: #FBFBFB;
   height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 1rem;
   border-radius: .5rem;
 }
@@ -512,8 +562,6 @@ h3, .product-card span {
   background-image: url(./assets/process.jpg);
   height: 560px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .blog-card p, .review > p {
@@ -529,7 +577,7 @@ h3, .product-card span {
 }
 
 
-.controls div, .review-details {
+.review-details {
   align-items: center;
 }
 
@@ -537,7 +585,6 @@ h3, .product-card span {
   border: 1px solid #b0b0b0;
   width: 2.5rem; height: 2.5rem;
   border-radius: 1.25rem;
-  justify-content: center;
 }
 
 .controls {
@@ -565,6 +612,7 @@ h3, .product-card span {
   width: 100%;
   overflow: hidden;
 }
+
 
 
 
@@ -784,6 +832,10 @@ h3, .product-card span {
 
   .review-wrapper {
     padding-right: 1rem;
+  }
+
+  .newsletter-wrapper > div {
+    padding: 0 24px;
   }
 
   

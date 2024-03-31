@@ -89,24 +89,8 @@ function handlePrevClick() {
 
     
     scrollToSlide(currentSlideIndex);
-    console.log(currentSlideIndex);
 }
 
-/*
-function handleNextClick() {
-    
-    if (currentSlideIndex >= reviewCards.length) {
-        currentSlideIndex = reviewCards.length - 2; // make sure that the clicks doesnt poass the number of cards
-        nextButton.disabled = true;
-    } else {
-        nextButton.disabled = false;
-        currentSlideIndex++;
-    }
-
-    scrollToSlide(currentSlideIndex);
-    console.log(currentSlideIndex);
-}
-*/
 
 
 function handleNextClick() {
@@ -119,7 +103,6 @@ function handleNextClick() {
     }
 
     scrollToSlide(currentSlideIndex);
-    console.log(currentSlideIndex);
 }
 
 
@@ -131,7 +114,5 @@ function scrollToSlide(slideIndex) {
     scrollAmount = getRcardWidth() * slideIndex;
 
     reviewWrapper.scrollTo({left: scrollAmount, behavior: "smooth"});
-    
-    console.log(reviewWrapper.scrollLeft);
 }
 
