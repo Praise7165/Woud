@@ -782,6 +782,10 @@ h3, .product-card span {
     flex: 0 0 80%;
   }
 
+  .review-wrapper {
+    padding-right: 1rem;
+  }
+
   
 
 }
